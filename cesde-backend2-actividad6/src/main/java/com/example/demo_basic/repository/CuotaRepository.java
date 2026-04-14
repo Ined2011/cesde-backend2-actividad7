@@ -9,9 +9,9 @@ import java.util.List;
 
 @Repository
 public interface CuotaRepository extends JpaRepository<Cuota, Long> {
-    long countByClienteIdAndEstado(Long clienteId, EstadoCuota estado);
+    long countByClienteIdAndEstadoPago(Long clienteId, EstadoCuota estadoPago);
 
     List<Cuota> findByClienteId(Long clienteId);
 
-    List<Cuota> findByEstado(EstadoCuota estado);
+    List<Cuota> findByEstadoPago(EstadoCuota estadoPago);
 }

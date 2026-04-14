@@ -34,7 +34,9 @@ public class ClienteService {
         cliente.setNombre(request.getNombre());
         cliente.setIdentificacion(request.getIdentificacion());
         cliente.setEdad(request.getEdad());
-        cliente.setCapacidadDeEndeudamiento(request.getCapacidadDeEndeudamiento());
+        cliente.setIngresoMensual(request.getIngresoMensual());
+        cliente.setTieneGarantia(request.getTieneGarantia());
+        cliente.setHistorialCrediticio(request.getHistorialCrediticio());
         return clienteRepository.save(cliente);
     }
 

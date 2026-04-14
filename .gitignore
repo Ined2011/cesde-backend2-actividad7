@@ -1,0 +1,32 @@
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
+logs/
+
+# Node modules (si aplica)
+node_modules/
+npm-debug.log

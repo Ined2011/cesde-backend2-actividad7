@@ -31,11 +31,11 @@ public class PrestamoService {
     @Transactional
     public Prestamo update(Long id, Prestamo request) {
         Prestamo prestamo = findEntity(id);
-        prestamo.setNombre(request.getNombre());
-        prestamo.setEspecie(request.getEspecie());
-        prestamo.setEdad(request.getEdad());
-        prestamo.setTamano(request.getTamano());
+        prestamo.setMontoSolicitado(request.getMontoSolicitado());
+        prestamo.setPlazoMeses(request.getPlazoMeses());
+        prestamo.setTasaInteres(request.getTasaInteres());
         prestamo.setEstado(request.getEstado());
+        prestamo.setCliente(request.getCliente());
         return prestamoRepository.save(prestamo);
     }
 

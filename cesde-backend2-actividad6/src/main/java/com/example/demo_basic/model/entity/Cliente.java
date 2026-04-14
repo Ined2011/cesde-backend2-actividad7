@@ -1,6 +1,9 @@
 package com.example.demo_basic.model.entity;
 
 import java.math.BigDecimal;
+
+import org.hibernate.annotations.ColumnTransformer;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
@@ -39,4 +42,9 @@ public class Cliente extends BaseEntity {
     @Column(name = "historial_crediticio", nullable = false, length = 20)
     private HistorialCrediticio historialCrediticio;
     // Valores: BUENO, MALO, SIN_HISTORIAL
+
+    @Column(name = "capacidad_de_endeudamiento", nullable = false, precision = 12, scale = 2)
+
+    @ColumnTransformer(write = "?::numeric(12,2)")
+    private BigDecimal capacidadDeEndeudamiento;
 }

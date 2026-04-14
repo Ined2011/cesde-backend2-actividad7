@@ -33,7 +33,7 @@ public class CuotaService {
     }
 
     public List<Cuota> findByEstado(EstadoCuota estado) {
-        return cuotaRepository.findByEstado(estado);
+        return cuotaRepository.findByEstadoPago(estado);
     }
 
     public List<Cuota> findByCliente(Long clienteId) {
